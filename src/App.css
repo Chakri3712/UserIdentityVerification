@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Top bar */
+.top-bar {
+  background-color: #2f5d8a;
+  padding: 10px 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  height: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Full container */
+.app-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+}
+
+/* Background image only in content area */
+.content-area {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-right: 100px;
+}
+
+/* White box overlay for readability */
+.portal-box {
+  background: linear-gradient(to bottom right, rgba(0, 51, 102, 0.8), rgba(0, 120, 215, 0.6));
+  padding: 40px;
+  border-radius: 10px;
+  text-align: right;
+  color: #ffffff;
+  position: relative;
+  top: -60px;
+}
+
+.verify-box {
+  margin-top: 20px;
+}
+
+.verify-box input {
+  padding: 8px;
+  border: 1px solid #003366;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.verify-box button {
+  background-color: #0078d7;
   color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.verify-box button:hover {
+  background-color: #005a9e;
 }
